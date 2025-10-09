@@ -8,7 +8,10 @@ public class Constant {
     // Resume files path
     public static String RAJU_RESUME_PATH = RESUME_FOLDER_PATH + File.separator + "Raju_Godamwar_SDET_Resume.pdf";
     public static String SUSHANT_RESUME_PATH = RESUME_FOLDER_PATH + File.separator + "Sushant_Jadhav_QA_Engineer.pdf";
-    public static String PRIYA_RESUME_PATH = RESUME_FOLDER_PATH + File.separator + "Priya_Yadav_Resume.pdf";
+    public static String PRIYA_RESUME_PATH = RESUME_FOLDER_PATH + File.separator + "Priya_Yadav_Full_Stack_Developer.pdf";
+    public static String ANIKET_RESUME_PATH = RESUME_FOLDER_PATH + File.separator + "Aniket_Potdar_QA_Engineer.pdf";
+    public static String ANCHAL_RESUME_PATH = RESUME_FOLDER_PATH + File.separator + "Anchal_Singh_Full_StackDeveloper.pdf";
+
 
 
     // Pdf files path

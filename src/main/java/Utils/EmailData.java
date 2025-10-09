@@ -116,5 +116,81 @@ public class EmailData {
                     "✉️ <a href='mailto:yadavpriya73028@gmail.com'>yadavpriya73028@gmail.com</a><br>" +
                     "🔗 <a href='https://www.linkedin.com/in/' target='_blank'>LinkedIn Profile</a></p>";
 
+    public static String ANIKET_EMAIL_SUBJECT = "Manual & QA Automation Tester | 3.7 YOE | Serving Notice Period | 8551042986";
+    public static final String ANIKET_EMAIL_BODY =
+            "<p>Hello,<br>" +
+                    "Greetings of the day!</p>" +
+
+                    "<p>My name is <b>Aniket Potdar</b>, and I have <b>3.7 years of experience</b> " +
+                    "as a <b>Senior QA Test Engineer</b> at <b>Wipro Ltd.</b> " +
+                    "I am writing to express my interest in a <b>Manual & QA Automation Test Engineer</b> " +
+                    "position at your organization. If there are any suitable openings, I would be grateful for the opportunity to be considered.</p>" +
+
+                    "<p><b>Below are my skill sets and professional details for your reference:</b></p>" +
+
+                    "<p><b>Skills:</b></p>" +
+                    "<ul>" +
+                    "<li>✔️ <b>Automation Testing:</b> BDD using Cucumber, basic Selenium WebDriver & JUnit</li>" +
+                    "<li>✔️ <b>Manual Testing:</b> Functional Testing, Regression Testing, Smoke Testing, UAT, SIT, API Testing using Postman</li>" +
+                    "<li>✔️ <b>Programming & Tools:</b> Unix Scripting, Jira, Swagger</li>" +
+                    "<li>✔️ <b>Databases:</b> Oracle SQL</li>" +
+                    "<li>✔️ <b>Defect Management & Methodologies:</b> Test Planning, Agile Scrum, Waterfall</li>" +
+                    "<li>✔️ <b>Customer Engagement:</b> AUAT/APROD calls, requirement clarification, issue resolution</li>" +
+                    "</ul>" +
+
+                    "<p>I have worked on designing and executing test cases, performing database validations, validating file outputs (XLSX, CSV, TXT), " +
+                    "and supporting migration projects to ensure high-quality releases under strict timelines.</p>" +
+
+                    "<p><b>Notice Period:</b> Serving notice period<br>" +
+                    "<b>Current CTC:</b> 7 LPA<br>" +
+                    "<b>Total Experience:</b> 3.7 years<br>" +
+                    "<b>Current Location:</b> Pune</p>" +
+
+                    "<p>Please find my CV attached for your reference. I look forward to any opportunities you may have.</p>" +
+
+                    "<p>Thanks & Regards,<br>" +
+                    "Aniket Potdar<br>" +
+                    "📞 <a href='tel:+918551042986'>+91 8551042986</a><br>" +   // 👉 replace with real phone number
+                    "✉️ <a href='mailto:aniketpotdar88@gmail.com'>aniketpotdar88@gmail.com</a><br>" +  // 👉 replace with real email
+                    "🔗 <a href='https://www.linkedin.com/in/aniket-potdar-61a24b197/' target='_blank'>LinkedIn Profile</a></p>";
+
+    public static String ANCHAL_EMAIL_SUBJECT = "Application for Software Engineer / Full Stack Developer Position | Serving Notice Period | 9104601838";
+    public static final String ANCHAL_EMAIL_BODY =
+            "<p>Dear Sir/Mam,</p>" +
+
+                    "<p>I hope this message finds you well.</p>" +
+
+                    "<p>My name is <b>Anchal Singh</b>, and I am writing to express my interest in <b>Full Stack Developer</b> opportunities within your esteemed organization. " +
+                    "I hold a <b>B.Tech in Information Technology</b> and have <b>3 years of professional experience</b> in designing, developing, and deploying robust web applications using modern full-stack technologies.</p>" +
+
+                    "<p>Currently, I am employed at <b>Rugged Monitoring</b> as a <b>Software Engineer 1</b>, where I develop high-performance backend services and real-time monitoring interfaces " +
+                    "using <b>Angular, C#/.NET, Java, Spring Boot, PostgreSQL, SignalR,</b> and <b>Redis</b>. My role involves optimizing application performance, implementing secure APIs, " +
+                    "and ensuring seamless communication between distributed services.</p>" +
+
+                    "<p>Previously, I worked as a <b>Full Stack Developer Intern</b> at <b>Logicwind LLP</b>, where I contributed to multiple projects built with <b>Node.js, Express.js, MongoDB,</b> " +
+                    "and <b>JWT authentication</b>. I also worked on frontend integrations with <b>React</b> and <b>Angular</b>, gaining hands-on experience in end-to-end application delivery.</p>" +
+
+                    "<p><b>Key Highlights:</b></p>" +
+                    "<ul>" +
+                    "<li>💡 Developed real-time asset monitoring systems using Angular, C#/.NET, Java (Spring Boot), SignalR, and Redis.</li>" +
+                    "<li>⚙️ Designed and optimized RESTful and Microservice-based APIs for scalable and secure data processing.</li>" +
+                    "<li>🎨 Built responsive, dynamic frontends using Angular and React with reusable component architecture.</li>" +
+                    "<li>🚀 Integrated Jenkins CI/CD pipelines for automated testing, build, and deployment workflows.</li>" +
+                    "<li>🐳 Worked with Docker and AWS for containerization and cloud deployment.</li>" +
+                    "<li>📘 Strong understanding of object-oriented programming, data structures, and design patterns.</li>" +
+                    "</ul>" +
+
+                    "<p>Attached is my resume for your kind consideration. I would be delighted to discuss how my experience and technical skills align with your team’s goals and how I can contribute to your organization’s success.</p>" +
+
+                    "<p>Thank you for your time and consideration. I look forward to your positive response.</p>" +
+
+                    "<p>Warm regards,<br>" +
+                    "<b>Anchal Singh</b><br>" +
+                    "📧 <a href='mailto:anchalsingh1029@gmail.com'>anchalsingh1029@gmail.com</a><br>" +
+                    "📞 <a href='tel:+919104601838'>+91 9104601838</a></p>";
+
+
+
 }
+
 
