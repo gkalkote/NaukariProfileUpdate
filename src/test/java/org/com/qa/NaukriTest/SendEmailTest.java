@@ -26,11 +26,11 @@ public class SendEmailTest {
     );
 
 
-    private String rajuEmailPassKey = "siiuxjrdbzfgumik";
+    private String rajuEmailPassKey = "lzcovpirefbjajlm";
     private String sushantEmailPassKey = "khejraffnvojznnb";
     private String priyaEmailPassKey = "vivukgxopmphpour";
     private String aniketaEmailPassKey = "lczwyxxuckyspyao";
-    private String anchalEmailPassKey = "xkzrebpkxqytdzjn";
+    private String anchalEmailPassKey = "vfehlvcsciwiwfdz";
 
     @Test
     public void sendEmail() {

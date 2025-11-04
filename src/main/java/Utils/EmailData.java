@@ -3,13 +3,13 @@ package Utils;
 public class EmailData {
 
 
-    public static String RAJU_EMAIL_SUBJECT = "Application for SDET| 4.3 YOE|Serving Notice Period|8625883565";
+    public static String RAJU_EMAIL_SUBJECT = "Application for SDET| 4.5 YOE|Serving Notice Period|8625883565";
 
     public static final String RAJU_EMAIL_BODY =
             "<p>Hello,<br>" +
                     "Greetings of the day!</p>" +
 
-                    "<p>My name is <b>Raju Godamwar</b>, and I have <b>4.3 years of experience</b> " +
+                    "<p>My name is <b>Raju Godamwar</b>, and I have <b>4.5 years of experience</b> " +
                     "as a <b>QA Automation Test Engineer</b> at <b>RMES India Pvt. Ltd.</b> " +
                     "I am writing to express my interest in a <b>Manual & QA Automation Test Engineer</b> " +
                     "position at your organization. If there are any suitable openings, I would be grateful for the opportunity to be considered.</p>" +
@@ -32,7 +32,7 @@ public class EmailData {
 
                     "<p><b>Notice Period:</b> Serving notice period<br>" +
                     "<b>Current CTC:</b> 9.85 LPA<br>" +
-                    "<b>Total Experience:</b> 4.3 years<br>" +
+                    "<b>Total Experience:</b> 4.5 years<br>" +
                     "<b>Current Location:</b> Hyderabad</p>" +
 
                     "<p>Please find my CV attached for your reference. I look forward to any opportunities you may have.</p>" +
@@ -116,7 +116,7 @@ public class EmailData {
                     "✉️ <a href='mailto:yadavpriya73028@gmail.com'>yadavpriya73028@gmail.com</a><br>" +
                     "🔗 <a href='https://www.linkedin.com/in/' target='_blank'>LinkedIn Profile</a></p>";
 
-    public static String ANIKET_EMAIL_SUBJECT = "Manual & QA Automation Tester | 3.7 YOE | Serving Notice Period | 8551042986";
+    public static String ANIKET_EMAIL_SUBJECT = "Manual & QA Automation Tester | 3.8 YOE | Serving Notice Period | 8551042986";
     public static final String ANIKET_EMAIL_BODY =
             "<p>Hello,<br>" +
                     "Greetings of the day!</p>" +
