@@ -43,7 +43,7 @@ public class EmailData {
                     "📞 8625883565</p>";
 
 
-    public static String SUSHANT_EMAIL_SUBJECT = "Application for SDET| 3.10 YOE|Immediate Joiner|7798748292";
+    public static String SUSHANT_EMAIL_SUBJECT = "Application for SDET| 3.10 Years Of Experience | Serving Notice Period | 7798748292";
     public static String SUSHANT_EMAIL_BODY =
             "<p>Hello,<br>" +
                     "Greetings of the day!</p>" +
