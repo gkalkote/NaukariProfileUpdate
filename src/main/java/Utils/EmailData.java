@@ -43,12 +43,12 @@ public class EmailData {
                     "📞 8625883565</p>";
 
 
-    public static String SUSHANT_EMAIL_SUBJECT = "Application for SDET| 3.10 Years Of Experience | Serving Notice Period | 7798748292";
+    public static String SUSHANT_EMAIL_SUBJECT = "Application for SDET| 4.1 Years Of Experience | Serving Notice Period | 7798748292";
     public static String SUSHANT_EMAIL_BODY =
             "<p>Hello,<br>" +
                     "Greetings of the day!</p>" +
 
-                    "<p>My name is <b>Sushant Jadhav</b>, and I have <b>3.10 years of experience</b> " +
+                    "<p>My name is <b>Sushant Jadhav</b>, and I have <b>4.1 years of experience</b> " +
                     "as a <b>QA Automation Test Engineer</b> at <b>RMES India Pvt. Ltd.</b> " +
                     "I am writing to express my interest in a <b>Manual & QA Automation Test Engineer</b> " +
                     "position at your organization. If there are any suitable openings, I would be grateful for the opportunity to be considered.</p>" +
@@ -71,7 +71,7 @@ public class EmailData {
 
                     "<p><b>Notice Period:</b> Serving notice period<br>" +
                     "<b>Current CTC:</b> 11.0 LPA<br>" +
-                    "<b>Total Experience:</b> 3.10 years<br>" +
+                    "<b>Total Experience:</b> 4.1 years<br>" +
                     "<b>Current Location:</b> Hyderabad</p>" +
 
                     "<p>Please find my CV attached for your reference. I look forward to any opportunities you may have.</p>" +
