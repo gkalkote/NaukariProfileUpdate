@@ -34,9 +34,12 @@ public class SendEmailTest {
 
     @Test
     public void sendEmail() {
+    	
+    	    int totalHRMailCount=0;
 
         for (String filePath : filesPaths) {
             Set<String> HR_Emails = ExtractHREmailsFromPDF.extractEmails(filePath);
+            totalHRMailCount+=HR_Emails.size(); // x = x+ HR_mail;
             EmailUtils emailUtils = new EmailUtils();
             emailUtils.sendEmailToBCC("rajugodamwar@gmail.com", rajuEmailPassKey, HR_Emails, RAJU_EMAIL_SUBJECT, RAJU_EMAIL_BODY, RAJU_RESUME_PATH);
             emailUtils.sendEmailToBCC("yadavpriya73028@gmail.com", priyaEmailPassKey, HR_Emails, PRIYA_EMAIL_SUBJECT, PRIYA_EMAIL_BODY, PRIYA_RESUME_PATH);
@@ -44,8 +47,9 @@ public class SendEmailTest {
             emailUtils.sendEmailToBCC("aniketpotdar88@gmail.com", aniketaEmailPassKey, HR_Emails, ANIKET_EMAIL_SUBJECT, ANIKET_EMAIL_BODY, ANIKET_RESUME_PATH);
             emailUtils.sendEmailToBCC("anchalsingh1029@gmail.com", anchalEmailPassKey, HR_Emails, ANCHAL_EMAIL_SUBJECT, ANCHAL_EMAIL_BODY, ANCHAL_RESUME_PATH);
 
-            System.out.println("Total Email Sent to  HR is :" + HR_Emails.size());
+//            System.out.println("Total Email Sent to  HR is :" + HR_Emails.size());
         }
+        System.out.println("Total Email send to HR's are : "+ totalHRMailCount);
     }
 
 
