@@ -11,6 +11,9 @@ public class Constant {
     public static String PRIYA_RESUME_PATH = RESUME_FOLDER_PATH + File.separator + "Priya_Yadav_Full_Stack_Developer.pdf";
     public static String ANIKET_RESUME_PATH = RESUME_FOLDER_PATH + File.separator + "Aniket_Potdar_QA_Engineer.pdf";
     public static String ANCHAL_RESUME_PATH = RESUME_FOLDER_PATH + File.separator + "Anchal_Singh_Full_StackDeveloper.pdf";
+    public static String GANESH_RESUME_PATH = RESUME_FOLDER_PATH + File.separator + "Ganesh_k_5_YOE_SDET.pdf";
+    public static String TRUPTI_RESUME_PATH = RESUME_FOLDER_PATH + File.separator + "TRUPTI-AHIR-5YOE.pdf";
+
 
 
 

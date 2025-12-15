@@ -190,6 +190,81 @@ public class EmailData {
                     "📞 <a href='tel:+919104601838'>+91 9104601838</a></p>";
 
 
+    public static String GANESH_EMAIL_SUBJECT = "Application for SDET| 5 YOE| 30Days Notice Period|8975660751";
+
+    public static final String GANESH_EMAIL_BODY =
+            "<p>Hello,<br>" +
+                    "Greetings of the day!</p>" +
+
+                    "<p>My name is <b>Ganesh Suresh Kalkote</b>, and I have <b>5 years of experience</b> " +
+                    "in the software testing field. I am writing to express my interest in a <b>SDET</b> " +
+                    "position at your organization. If there are any suitable openings, I would be grateful for the opportunity to be considered.</p>" +
+
+                    "<p><b>Below are my skill sets and professional details for your reference:</b></p>" +
+
+                    "<p><b>Skills:</b></p>" +
+                    "<ul>" +
+                    "<li>✔️ <b>Automation Testing:</b> Selenium WebDriver, Playwright with Java, TestNG, Maven, Page Object Model (POM), Locating Strategies, TestRiagor</li>" +
+                    "<li>✔️ <b>Manual Testing:</b> Functional Testing, Regression Testing, Smoke Testing, API Testing</li>" +
+                    "<li>✔️ <b>Programming & Scripting:</b> Java, OOP Concepts, Unix Scripting, Collections, Exception Handling, Git commands</li>" +
+                    "<li>✔️ <b>API Testing & Tools:</b> Postman, REST API Validation</li>" +
+                    "<li>✔️ <b>CI/CD & Version Control:</b> Jenkins, Git, Bitbucket</li>" +
+                    "<li>✔️ <b>Databases:</b> PostgreSQL, SQL</li>" +
+                    "<li>✔️ <b>Defect Management & Methodologies:</b> JIRA, Test Planning, Agile Scrum</li>" +
+                    "</ul>" +
+
+                    "<p>I have successfully led test planning activities, developed automation frameworks, and implemented test strategies that have improved test coverage and reduced manual effort. " +
+                    "My collaborative approach with cross-functional teams has resulted in increased efficiency and faster release cycles.</p>" +
+
+                    "<p><b>Notice Period:</b> Serving notice period<br>" +
+                    "<b>Current CTC:</b> 15.5 LPA<br>" +
+                    "<b>Total Experience:</b> 5 years<br>" +
+                    "<b>Current Location:</b> Hyderabad</p>" +
+
+                    "<p>Please find my CV attached for your reference. I look forward to any opportunities you may have.</p>" +
+
+                    "<p>Thanks & Regards,<br>" +
+                    "Ganesh Suresh Kalkote<br>" +
+                    "✉️ <a href='mailto:gkalkote2026@gmail.com'>gkalkote2026@gmail.com</a><br>" +
+                    "📞 8975660751</p>";
+
+    public static String TRUPTI_EMAIL_SUBJECT = "Application for Automation QA Engineer| 5 YOE| 30Days Notice Period|9172438450";
+
+    public static final String TRUPTI_EMAIL_BODY =
+            "<p>Hello,<br>" +
+                    "Greetings of the day!</p>" +
+
+                    "<p>My name is <b>Trupti Rajendra Ahir</b>, and I have <b>5 years of experience</b> " +
+                    "in the software testing field. I am writing to express my interest in a <b>Senior Test Engineer</b> " +
+                    "position at your organization. If there are any suitable openings, I would be grateful for the opportunity to be considered.</p>" +
+
+                    "<p><b>Below are my skill sets and professional details for your reference:</b></p>" +
+
+                    "<p><b>Skills:</b></p>" +
+                    "<ul>" +
+                    "<li>✔️ <b>Automation Testing:</b> Selenium WebDriver, WebDriverio with typescript, TestNG, Maven,Typescript, teamcity, gcp, redhat, Page Object Model (POM), Locating Strategies, TestRiagor</li>" +
+                    "<li>✔️ <b>Manual Testing:</b> Functional Testing, Regression Testing, Smoke Testing, API Testing</li>" +
+                    "<li>✔️ <b>Programming & Scripting:</b> Java, OOP Concepts, Unix Scripting, Collections, Exception Handling, Git commands</li>" +
+                    "<li>✔️ <b>API Testing & Tools:</b> Postman, REST API Validation</li>" +
+                    "<li>✔️ <b>CI/CD & Version Control:</b> Jenkins, Git, Bitbucket</li>" +
+                    "<li>✔️ <b>Databases:</b> PostgreSQL, SQL</li>" +
+                    "<li>✔️ <b>Defect Management & Methodologies:</b> JIRA, Test Planning, Agile Scrum</li>" +
+                    "</ul>" +
+
+                    "<p>I have successfully led test planning activities, developed automation frameworks, and implemented test strategies that have improved test coverage and reduced manual effort. " +
+                    "My collaborative approach with cross-functional teams has resulted in increased efficiency and faster release cycles.</p>" +
+
+                    "<p><b>Notice Period:</b> Serving notice period<br>" +
+                    "<b>Total Experience:</b> 5 years<br>" +
+                    "<b>Current Location:</b> Nagpur</p>" +
+
+                    "<p>Please find my CV attached for your reference. I look forward to any opportunities you may have.</p>" +
+
+                    "<p>Thanks & Regards,<br>" +
+                    "Trupti Rajendra Ahir<br>" +
+                    "✉️ <a href='mailto:truptirahir26@gmail.com'>truptirahir26@gmail.com</a><br>" +
+                    "📞 9172438450</p>";
+
 
 }
 
