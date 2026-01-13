@@ -3,7 +3,7 @@ package Utils;
 public class EmailData {
 
 
-    public static String RAJU_EMAIL_SUBJECT = "Application for SDET| 4.5 YOE|Serving Notice Period|8625883565";
+    public static String RAJU_EMAIL_SUBJECT = "Application for SDET | 4.6 YOE | Immediate Joiner | 8625883565";
 
     public static final String RAJU_EMAIL_BODY =
             "<p>Hello,<br>" +
@@ -69,7 +69,7 @@ public class EmailData {
                     "<p>I have successfully led test planning activities, developed automation frameworks, and implemented test strategies that have improved test coverage and reduced manual effort. " +
                     "My collaborative approach with cross-functional teams has resulted in increased efficiency and faster release cycles.</p>" +
 
-                    "<p><b>Notice Period:</b> Serving notice period<br>" +
+                    "<p><b>Notice Period:</b> Immediate Joiner <br>" +
                     "<b>Current CTC:</b> 11.0 LPA<br>" +
                     "<b>Total Experience:</b> 4.1 years<br>" +
                     "<b>Current Location:</b> Hyderabad</p>" +
@@ -150,8 +150,8 @@ public class EmailData {
 
                     "<p>Thanks & Regards,<br>" +
                     "Aniket Potdar<br>" +
-                    "📞 <a href='tel:+918551042986'>+91 8551042986</a><br>" +   // 👉 replace with real phone number
-                    "✉️ <a href='mailto:aniketpotdar88@gmail.com'>aniketpotdar88@gmail.com</a><br>" +  // 👉 replace with real email
+                    "📞 <a href='tel:+918551042986'>+91 8551042986</a><br>" +
+                    "✉️ <a href='mailto:aniketpotdar88@gmail.com'>aniketpotdar88@gmail.com</a><br>" +
                     "🔗 <a href='https://www.linkedin.com/in/aniket-potdar-61a24b197/' target='_blank'>LinkedIn Profile</a></p>";
 
     public static String ANCHAL_EMAIL_SUBJECT = "Application for Software Engineer / Full Stack Developer Position | Serving Notice Period | 9104601838";
@@ -265,6 +265,42 @@ public class EmailData {
                     "✉️ <a href='mailto:truptirahir26@gmail.com'>truptirahir26@gmail.com</a><br>" +
                     "📞 9172438450</p>";
 
+
+    public static String VINAYAK_EMAIL_SUBJECT = "Application for Senior SDET/Lead SDET| 10.4 Years Of Experience | Immediately Available | 7798748292";
+    public static String VINAYAK_EMAIL_BODY =
+            "<p>Hello,<br>" +
+                    "Greetings of the day!</p>" +
+
+                    "<p>I am Vinayak Shriram Badgujar, I would like to apply for a Senior/Lead SDET role in your company. I am confident that my background and abilities are an excellent match for the job.</p>" +
+
+                    "<p><b>Below are my skill sets and professional details for your reference:</b></p>" +
+
+                    "<p><b>Skills:</b></p>" +
+                    "<ul>" +
+                    "<li>✔️ <b>Automation Testing:</b> Playwright (JS/TS), Selenium WebDriver, TestNG, Maven, framework design, Page Object Model, TestRigor</li>"+
+                    "<li>✔️ <b>Manual & API Testing:</b> Functional, Regression, Smoke Testing; Postman, REST API Validation</li>"+
+                    "<li>✔️ <b>Test Management & Leadership:</b> Test Planning (Scoping, Estimation, Budgeting), Execution, Reporting, Mentoring, Stakeholder Management</li>"+
+                    "<li>✔️ <b>Programming & Scripting:</b> Java, OOP Concepts, TypeScript, JavaScript, Unix Scripting, Collections, Exception Handling</li>"+
+                    "<li>✔️ <b>CI/CD & Deployment:</b> Jenkins, CI/CD Pipelines, AWS, Git, Bitbucket, GitHub</li>"+
+                    "<li>✔️ <b>Databases & Monitoring:</b> PostgreSQL, SQL, Bugsnag, Kibana</li>"+
+                    "<li>✔️ <b>Defect Management & Methodologies:</b> JIRA, TestRail, Agile Scrum, Defect Tracking</li>"+
+                    "<li>✔️ <b>Soft Skills:</b> Critical Thinking, Problem-Solving, Effective Communication, Time Management</li>"+
+                    "</ul>" +
+
+                    "<p>I firmly believe that I can make a positive contribution to your company and I have enclosed my resume to provide more information on my skills and experience. I would welcome the opportunity to meet with you for an in-depth discussion and I will make myself available at your first convenience.</p>" +
+
+                    "<p><b>Notice Period:</b> Immediately Available<br>" +
+                    "<b>Current CTC:</b> 23.0 LPA<br>" +
+                    "<b>Total Experience:</b> 10.4 years<br>" +
+                    "<b>Current Location:</b> Mumbai</p>" +
+                    "<b>Open to Relocate Location:</b> Mumbai/Pune/Hyderabd/Banglore</p>" +
+
+                    "<p>Thank you for your review and consideration. I look forward to hearing from you soon.</p>" +
+
+                    "<p>Thanks & Regards,<br>" +
+                    "Vinayak Badgujar<br>" +
+                    "✉️ <a href='mailto:vinayakbadgujar29@gmail.com'>vinayakbadgujar29@gmail.com</a><br>" +
+                    "📞 9028490824</p>";
 
 }
 
