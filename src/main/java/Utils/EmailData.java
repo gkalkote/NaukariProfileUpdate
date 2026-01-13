@@ -30,7 +30,7 @@ public class EmailData {
                     "<p>I have successfully led test planning activities, developed automation frameworks, and implemented test strategies that have improved test coverage and reduced manual effort. " +
                     "My collaborative approach with cross-functional teams has resulted in increased efficiency and faster release cycles.</p>" +
 
-                    "<p><b>Notice Period:</b> Serving notice period<br>" +
+                    "<p><b>Notice Period:</b> Immediate Joiner <br>" +
                     "<b>Current CTC:</b> 9.85 LPA<br>" +
                     "<b>Total Experience:</b> 4.5 years<br>" +
                     "<b>Current Location:</b> Hyderabad</p>" +
@@ -69,7 +69,7 @@ public class EmailData {
                     "<p>I have successfully led test planning activities, developed automation frameworks, and implemented test strategies that have improved test coverage and reduced manual effort. " +
                     "My collaborative approach with cross-functional teams has resulted in increased efficiency and faster release cycles.</p>" +
 
-                    "<p><b>Notice Period:</b> Immediate Joiner <br>" +
+                    "<p><b>Notice Period:</b> Serving notice period <br>" +
                     "<b>Current CTC:</b> 11.0 LPA<br>" +
                     "<b>Total Experience:</b> 4.1 years<br>" +
                     "<b>Current Location:</b> Hyderabad</p>" +
@@ -116,7 +116,7 @@ public class EmailData {
                     "✉️ <a href='mailto:yadavpriya73028@gmail.com'>yadavpriya73028@gmail.com</a><br>" +
                     "🔗 <a href='https://www.linkedin.com/in/' target='_blank'>LinkedIn Profile</a></p>";
 
-    public static String ANIKET_EMAIL_SUBJECT = "Manual & QA Automation Tester | 3.8 YOE | Serving Notice Period | 8551042986";
+    public static String ANIKET_EMAIL_SUBJECT = "Manual & QA Automation Tester | 3.9 YOE | Serving Notice Period | 8551042986";
     public static final String ANIKET_EMAIL_BODY =
             "<p>Hello,<br>" +
                     "Greetings of the day!</p>" +
@@ -143,7 +143,7 @@ public class EmailData {
 
                     "<p><b>Notice Period:</b> Serving notice period<br>" +
                     "<b>Current CTC:</b> 7 LPA<br>" +
-                    "<b>Total Experience:</b> 3.7 years<br>" +
+                    "<b>Total Experience:</b> 3.9 years<br>" +
                     "<b>Current Location:</b> Pune</p>" +
 
                     "<p>Please find my CV attached for your reference. I look forward to any opportunities you may have.</p>" +
