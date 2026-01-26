@@ -33,8 +33,6 @@ public class SendEmailTest {
     private String anchalEmailPassKey = "vfehlvcsciwiwfdz";
     private String truptiEmailPassKey = "trnlezudgfqkdxcb";
     private String ganeshEmailPassKey = "adrctxykgpumbyjb";
-    private String vinayakBadgujarPasskey = "hqhbfvjzchqtazbp";
-
 
 
     @Test
@@ -53,8 +51,6 @@ public class SendEmailTest {
             emailUtils.sendEmailToBCC("anchalsingh1029@gmail.com", anchalEmailPassKey, HR_Emails, ANCHAL_EMAIL_SUBJECT, ANCHAL_EMAIL_BODY, ANCHAL_RESUME_PATH);
             emailUtils.sendEmailToBCC("truptirahir26@gmail.com", truptiEmailPassKey, HR_Emails, TRUPTI_EMAIL_SUBJECT, TRUPTI_EMAIL_BODY, TRUPTI_RESUME_PATH);
             emailUtils.sendEmailToBCC("gkalkote2026@gmail.com", ganeshEmailPassKey, HR_Emails, GANESH_EMAIL_SUBJECT, GANESH_EMAIL_BODY, GANESH_RESUME_PATH);
-            emailUtils.sendEmailToBCC("vinayakbadgujar29@gmail.com", vinayakBadgujarPasskey, HR_Emails, VINAYAK_EMAIL_SUBJECT, VINAYAK_EMAIL_BODY, VINAYAK_RESUME_PATH);
-
         }
         System.out.println("Total Email send to HR's are : "+ totalHRMailCount);
     }

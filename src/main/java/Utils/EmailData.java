@@ -9,7 +9,7 @@ public class EmailData {
             "<p>Hello,<br>" +
                     "Greetings of the day!</p>" +
 
-                    "<p>My name is <b>Raju Godamwar</b>, and I have <b>4.5 years of experience</b> " +
+                    "<p>My name is <b>Raju Godamwar</b>, and I have <b>4.6 years of experience</b> " +
                     "as a <b>QA Automation Test Engineer</b> at <b>RMES India Pvt. Ltd.</b> " +
                     "I am writing to express my interest in a <b>Manual & QA Automation Test Engineer</b> " +
                     "position at your organization. If there are any suitable openings, I would be grateful for the opportunity to be considered.</p>" +
@@ -43,12 +43,12 @@ public class EmailData {
                     "📞 8625883565</p>";
 
 
-    public static String SUSHANT_EMAIL_SUBJECT = "Application for SDET| 4.1 Years Of Experience | Serving Notice Period | 7798748292";
+    public static String SUSHANT_EMAIL_SUBJECT = "Application for SDET| 4.2 Years Of Experience | Serving Notice Period | 7798748292";
     public static String SUSHANT_EMAIL_BODY =
             "<p>Hello,<br>" +
                     "Greetings of the day!</p>" +
 
-                    "<p>My name is <b>Sushant Jadhav</b>, and I have <b>4.1 years of experience</b> " +
+                    "<p>My name is <b>Sushant Jadhav</b>, and I have <b>4.2 years of experience</b> " +
                     "as a <b>QA Automation Test Engineer</b> at <b>RMES India Pvt. Ltd.</b> " +
                     "I am writing to express my interest in a <b>Manual & QA Automation Test Engineer</b> " +
                     "position at your organization. If there are any suitable openings, I would be grateful for the opportunity to be considered.</p>" +
@@ -121,7 +121,7 @@ public class EmailData {
             "<p>Hello,<br>" +
                     "Greetings of the day!</p>" +
 
-                    "<p>My name is <b>Aniket Potdar</b>, and I have <b>3.7 years of experience</b> " +
+                    "<p>My name is <b>Aniket Potdar</b>, and I have <b>3.9 years of experience</b> " +
                     "as a <b>Senior QA Test Engineer</b> at <b>Wipro Ltd.</b> " +
                     "I am writing to express my interest in a <b>Manual & QA Automation Test Engineer</b> " +
                     "position at your organization. If there are any suitable openings, I would be grateful for the opportunity to be considered.</p>" +
@@ -190,13 +190,13 @@ public class EmailData {
                     "📞 <a href='tel:+919104601838'>+91 9104601838</a></p>";
 
 
-    public static String GANESH_EMAIL_SUBJECT = "Application for SDET| 5 YOE| 30Days Notice Period|8975660751";
+    public static String GANESH_EMAIL_SUBJECT = "Application for SDET| 5.1 YOE| 30Days Notice Period|8975660751";
 
     public static final String GANESH_EMAIL_BODY =
             "<p>Hello,<br>" +
                     "Greetings of the day!</p>" +
 
-                    "<p>My name is <b>Ganesh Suresh Kalkote</b>, and I have <b>5 years of experience</b> " +
+                    "<p>My name is <b>Ganesh Suresh Kalkote</b>, and I have <b>5.1 years of experience</b> " +
                     "in the software testing field. I am writing to express my interest in a <b>SDET</b> " +
                     "position at your organization. If there are any suitable openings, I would be grateful for the opportunity to be considered.</p>" +
 
@@ -218,7 +218,7 @@ public class EmailData {
 
                     "<p><b>Notice Period:</b> Serving notice period<br>" +
                     "<b>Current CTC:</b> 15.5 LPA<br>" +
-                    "<b>Total Experience:</b> 5 years<br>" +
+                    "<b>Total Experience:</b> 5.1 years<br>" +
                     "<b>Current Location:</b> Hyderabad</p>" +
 
                     "<p>Please find my CV attached for your reference. I look forward to any opportunities you may have.</p>" +
@@ -234,7 +234,7 @@ public class EmailData {
             "<p>Hello,<br>" +
                     "Greetings of the day!</p>" +
 
-                    "<p>My name is <b>Trupti Rajendra Ahir</b>, and I have <b>5 years of experience</b> " +
+                    "<p>My name is <b>Trupti Rajendra Ahir</b>, and I have <b>5.1 years of experience</b> " +
                     "in the software testing field. I am writing to express my interest in a <b>Senior Test Engineer</b> " +
                     "position at your organization. If there are any suitable openings, I would be grateful for the opportunity to be considered.</p>" +
 
@@ -255,7 +255,7 @@ public class EmailData {
                     "My collaborative approach with cross-functional teams has resulted in increased efficiency and faster release cycles.</p>" +
 
                     "<p><b>Notice Period:</b> Serving notice period<br>" +
-                    "<b>Total Experience:</b> 5 years<br>" +
+                    "<b>Total Experience:</b> 5.1 years<br>" +
                     "<b>Current Location:</b> Nagpur</p>" +
 
                     "<p>Please find my CV attached for your reference. I look forward to any opportunities you may have.</p>" +
@@ -264,43 +264,6 @@ public class EmailData {
                     "Trupti Rajendra Ahir<br>" +
                     "✉️ <a href='mailto:truptirahir26@gmail.com'>truptirahir26@gmail.com</a><br>" +
                     "📞 9172438450</p>";
-
-
-    public static String VINAYAK_EMAIL_SUBJECT = "Application for Senior SDET/Lead SDET| 10.4 Years Of Experience | Immediately Available | 7798748292";
-    public static String VINAYAK_EMAIL_BODY =
-            "<p>Hello,<br>" +
-                    "Greetings of the day!</p>" +
-
-                    "<p>I am Vinayak Shriram Badgujar, I would like to apply for a Senior/Lead SDET role in your company. I am confident that my background and abilities are an excellent match for the job.</p>" +
-
-                    "<p><b>Below are my skill sets and professional details for your reference:</b></p>" +
-
-                    "<p><b>Skills:</b></p>" +
-                    "<ul>" +
-                    "<li>✔️ <b>Automation Testing:</b> Playwright (JS/TS), Selenium WebDriver, TestNG, Maven, framework design, Page Object Model, TestRigor</li>"+
-                    "<li>✔️ <b>Manual & API Testing:</b> Functional, Regression, Smoke Testing; Postman, REST API Validation</li>"+
-                    "<li>✔️ <b>Test Management & Leadership:</b> Test Planning (Scoping, Estimation, Budgeting), Execution, Reporting, Mentoring, Stakeholder Management</li>"+
-                    "<li>✔️ <b>Programming & Scripting:</b> Java, OOP Concepts, TypeScript, JavaScript, Unix Scripting, Collections, Exception Handling</li>"+
-                    "<li>✔️ <b>CI/CD & Deployment:</b> Jenkins, CI/CD Pipelines, AWS, Git, Bitbucket, GitHub</li>"+
-                    "<li>✔️ <b>Databases & Monitoring:</b> PostgreSQL, SQL, Bugsnag, Kibana</li>"+
-                    "<li>✔️ <b>Defect Management & Methodologies:</b> JIRA, TestRail, Agile Scrum, Defect Tracking</li>"+
-                    "<li>✔️ <b>Soft Skills:</b> Critical Thinking, Problem-Solving, Effective Communication, Time Management</li>"+
-                    "</ul>" +
-
-                    "<p>I firmly believe that I can make a positive contribution to your company and I have enclosed my resume to provide more information on my skills and experience. I would welcome the opportunity to meet with you for an in-depth discussion and I will make myself available at your first convenience.</p>" +
-
-                    "<p><b>Notice Period:</b> Immediately Available<br>" +
-                    "<b>Current CTC:</b> 23.0 LPA<br>" +
-                    "<b>Total Experience:</b> 10.4 years<br>" +
-                    "<b>Current Location:</b> Mumbai</p>" +
-                    "<b>Open to Relocate Location:</b> Mumbai/Pune/Hyderabd/Banglore</p>" +
-
-                    "<p>Thank you for your review and consideration. I look forward to hearing from you soon.</p>" +
-
-                    "<p>Thanks & Regards,<br>" +
-                    "Vinayak Badgujar<br>" +
-                    "✉️ <a href='mailto:vinayakbadgujar29@gmail.com'>vinayakbadgujar29@gmail.com</a><br>" +
-                    "📞 9028490824</p>";
 
 }
 
