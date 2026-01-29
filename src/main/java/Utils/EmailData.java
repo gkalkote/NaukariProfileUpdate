@@ -265,6 +265,50 @@ public class EmailData {
                     "✉️ <a href='mailto:truptirahir26@gmail.com'>truptirahir26@gmail.com</a><br>" +
                     "📞 9172438450</p>";
 
+    public static String NIKHIL_EMAIL_SUBJECT = "Application for Java Backend Engineer | Spring Boot | Microservices | 3 YOE | 9158338899";
+
+    public static final String NIKHIL_EMAIL_BODY =
+            "<p>Hello,<br>" +
+                    "Greetings of the day!</p>" +
+
+                    "<p>My name is <b>Nikhil Mali</b>, and I have <b>3 years of experience</b> as a Java Developer at " +
+                    "<b>BA Continuum India Private Limited (Bank of America)</b>. I am writing to express my interest " +
+                    "in a <b>Java Developer</b> position at your organization. I would appreciate the opportunity to be " +
+                    "considered for any suitable openings that match my profile.</p>" +
+
+                    "<p><b>Below are my skill sets and professional details for your reference:</b></p>" +
+
+                    "<p><b>Skills:</b></p>" +
+                    "<ul>" +
+                    "<li>✔️ <b>Programming Language:</b> Java</li>" +
+                    "<li>✔️ <b>Core Java:</b> OOP Concepts, Collections, Exception Handling, Multithreading</li>" +
+                    "<li>✔️ <b>Frameworks & Technologies:</b> Spring Boot, RESTful Web Services</li>" +
+                    "<li>✔️ <b>Testing:</b> JUnit, Mockito</li>" +
+                    "<li>✔️ <b>Build & Version Control:</b> Maven, Git, Bitbucket</li>" +
+                    "<li>✔️ <b>Databases:</b> SQL</li>" +
+                    "<li>✔️ <b>Tools & Platforms:</b> SonarQube, Splunk, Parasoft SOAtest</li>" +
+                    "<li>✔️ <b>Methodologies:</b> Agile Scrum</li>" +
+                    "</ul>" +
+
+                    "<p>In my current role, I have been involved in developing and maintaining backend services, " +
+                    "writing clean and efficient Java code, implementing REST APIs, and collaborating closely with " +
+                    "cross-functional teams to deliver high-quality solutions. I also have hands-on experience in " +
+                    "unit testing and code quality analysis.</p>" +
+
+                    "<p><b>Total Experience:</b> 3 years<br>" +
+                    "<b>Current CTC:</b> 7.5 LPA<br>" +
+                    "<b>Notice Period:</b> Serving notice period<br>" +
+                    "<b>Current Location:</b> Hyderabad, India</p>" +
+
+                    "<p>Please find my resume attached for your review. I would be glad to discuss how my skills and " +
+                    "experience align with your team’s requirements.</p>" +
+
+                    "<p>Thanks & Regards,<br>" +
+                    "Nikhil Mali<br>" +
+                    "✉️ <a href='mailto:em.nikhilmali@gmail.com'>em.nikhilmali@gmail.com</a><br>" +
+                    "📞 9158338899</p>";
+
+
 }
 
 

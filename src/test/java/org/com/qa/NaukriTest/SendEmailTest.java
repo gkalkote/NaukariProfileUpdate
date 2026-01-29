@@ -33,6 +33,7 @@ public class SendEmailTest {
     private String anchalEmailPassKey = "vfehlvcsciwiwfdz";
     private String truptiEmailPassKey = "trnlezudgfqkdxcb";
     private String ganeshEmailPassKey = "adrctxykgpumbyjb";
+    private String nikhilEmailPassKey="rmunucldudesopqo";
 
 
     @Test
@@ -44,13 +45,15 @@ public class SendEmailTest {
             Set<String> HR_Emails = ExtractHREmailsFromPDF.extractEmails(filePath);
             totalHRMailCount+=HR_Emails.size(); // x = x+ HR_mail;
             EmailUtils emailUtils = new EmailUtils();
-            emailUtils.sendEmailToBCC("rajugodamwar@gmail.com", rajuEmailPassKey, HR_Emails, RAJU_EMAIL_SUBJECT, RAJU_EMAIL_BODY, RAJU_RESUME_PATH);
+//            emailUtils.sendEmailToBCC("rajugodamwar@gmail.com", rajuEmailPassKey, HR_Emails, RAJU_EMAIL_SUBJECT, RAJU_EMAIL_BODY, RAJU_RESUME_PATH);
             emailUtils.sendEmailToBCC("yadavpriya73028@gmail.com", priyaEmailPassKey, HR_Emails, PRIYA_EMAIL_SUBJECT, PRIYA_EMAIL_BODY, PRIYA_RESUME_PATH);
             emailUtils.sendEmailToBCC("sushj2405@gmail.com", sushantEmailPassKey, HR_Emails, SUSHANT_EMAIL_SUBJECT, SUSHANT_EMAIL_BODY, SUSHANT_RESUME_PATH);
             emailUtils.sendEmailToBCC("aniketpotdar88@gmail.com", aniketaEmailPassKey, HR_Emails, ANIKET_EMAIL_SUBJECT, ANIKET_EMAIL_BODY, ANIKET_RESUME_PATH);
             emailUtils.sendEmailToBCC("anchalsingh1029@gmail.com", anchalEmailPassKey, HR_Emails, ANCHAL_EMAIL_SUBJECT, ANCHAL_EMAIL_BODY, ANCHAL_RESUME_PATH);
             emailUtils.sendEmailToBCC("truptirahir26@gmail.com", truptiEmailPassKey, HR_Emails, TRUPTI_EMAIL_SUBJECT, TRUPTI_EMAIL_BODY, TRUPTI_RESUME_PATH);
             emailUtils.sendEmailToBCC("gkalkote2026@gmail.com", ganeshEmailPassKey, HR_Emails, GANESH_EMAIL_SUBJECT, GANESH_EMAIL_BODY, GANESH_RESUME_PATH);
+            emailUtils.sendEmailToBCC("em.nikhilmali@gmail.com", nikhilEmailPassKey, HR_Emails, NIKHIL_EMAIL_SUBJECT, NIKHIL_EMAIL_BODY, NIKHIL_RESUME_PATH);
+
         }
         System.out.println("Total Email send to HR's are : "+ totalHRMailCount);
     }
