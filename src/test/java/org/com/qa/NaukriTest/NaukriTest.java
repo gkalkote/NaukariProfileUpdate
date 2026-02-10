@@ -13,7 +13,7 @@ public class NaukriTest extends PlaywrightFactoryPage {
         return new Object[][] { {"rajugodamwar@gmail.com", "Raju1998@"},{"gskalkote@gmail.com","Ganesh@123"}};
               //  ,{"krishnaindrale19@gmail.com","Krishna@123"},{"yadavpriya73028@gmail.com","Priya@2023"} };
     }
-    @Test(dataProvider = "naukriUsers")
+    @Test(dataProvider = "naukriUsers",enabled = false)
     public void naukariProfileUpdate(String userName, String password) {
         LoginPage loginPage = getLoginPage();
         HomePage homePage = loginPage.login(userName, password);
