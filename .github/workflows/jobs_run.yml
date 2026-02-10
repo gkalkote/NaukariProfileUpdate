@@ -1,0 +1,23 @@
+name: Scheduled Automation Tests
+
+on:
+  schedule:
+    - cron: "30 5 * * *"   # Runs daily at 2:30 AM UTC
+  workflow_dispatch:       # Manual trigger button
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '11'
+
+      - name: Run Maven Tests
+        run: mvn clean test
