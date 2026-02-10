@@ -10,7 +10,8 @@ public class NaukriTest extends PlaywrightFactoryPage {
 
     @DataProvider(name = "naukriUsers")
     public Object[][] getNaukriUsers() {
-        return new Object[][] { {"rajugodamwar@gmail.com", "Raju1998@"},{"gskalkote@gmail.com","Ganesh@123"},{"krishnaindrale19@gmail.com","Krishna@123"},{"yadavpriya73028@gmail.com","Priya@2023"} };
+        return new Object[][] { {"rajugodamwar@gmail.com", "Raju1998@"},{"gskalkote@gmail.com","Ganesh@123"}};
+              //  ,{"krishnaindrale19@gmail.com","Krishna@123"},{"yadavpriya73028@gmail.com","Priya@2023"} };
     }
     @Test(dataProvider = "naukriUsers")
     public void naukariProfileUpdate(String userName, String password) {

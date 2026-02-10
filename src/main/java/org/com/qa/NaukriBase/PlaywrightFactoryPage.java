@@ -19,7 +19,7 @@ public class PlaywrightFactoryPage {
         threadLocalPlaywright.set(playwright);
 
         Browser browser = playwright.chromium()
-                .launch(new BrowserType.LaunchOptions().setHeadless(false));
+                .launch(new BrowserType.LaunchOptions().setHeadless(true));
         threadLocalBrowser.set(browser);
 
         Page page = browser.newPage();
