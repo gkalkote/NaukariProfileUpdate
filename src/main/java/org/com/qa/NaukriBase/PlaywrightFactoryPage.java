@@ -1,9 +1,13 @@
 package org.com.qa.NaukriBase;
 
+import Utils.EmailUtils;
 import com.microsoft.playwright.*;
 import org.com.qa.NaukaruPages.LoginPage;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+
+import static Utils.Constant.HR_EMAIL_PATH;
 
 public class PlaywrightFactoryPage {
 
@@ -28,8 +32,17 @@ public class PlaywrightFactoryPage {
         // Navigate to login page
         page.navigate("https://www.naukri.com/nlogin/login");
 
+
         // Initialize LoginPage
         threadLocalLoginPage.set(new LoginPage(page));
+    }
+
+    @BeforeSuite
+    public void emailPdfCleanUpAndDownloadLatest(){
+        String sushantEmailPassKey = "khejraffnvojznnb";
+        EmailUtils emailUtils = new EmailUtils();
+        emailUtils.deleteExistingPdfs(HR_EMAIL_PATH);
+        emailUtils.downloadPdfAttachments("sushj2405@gmail.com", sushantEmailPassKey,"[Update our Phone Number] - Today Testing Jobs Across India",HR_EMAIL_PATH);
     }
 
     @AfterMethod
