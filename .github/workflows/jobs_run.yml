@@ -1,12 +1,12 @@
-name: Scheduled Automation Tests
+name: Scheduled Playwright Tests
 
 on:
   schedule:
-    - cron: "30 5 * * *"   # Runs daily at 2:30 AM UTC
-  workflow_dispatch:       # Manual trigger button
+    - cron: "30 5 * * *"
+  workflow_dispatch:
 
 jobs:
-  run-tests:
+  playwright-tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,5 +19,17 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Run Maven Tests
+      - name: Cache Maven dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2
+          key: maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: maven-
+
+      # 🔥 IMPORTANT STEP – Install Playwright browsers + deps
+      - name: Install Playwright browsers & dependencies
+        run: mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install --with-deps"
+
+      # ▶️ Run tests
+      - name: Run Playwright Tests
         run: mvn clean test
