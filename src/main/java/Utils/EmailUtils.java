@@ -151,7 +151,7 @@ public class EmailUtils {
             inbox.open(Folder.READ_ONLY);
 
             int totalMessages = inbox.getMessageCount();
-            int start = Math.max(1, totalMessages - 30);
+            int start = Math.max(1, totalMessages - 35);
 
             Message[] messages = inbox.getMessages(start, totalMessages);
 
@@ -164,7 +164,7 @@ public class EmailUtils {
 
             for (int i = messages.length - 1; i >= 0; i--) {
                 Message message = messages[i];
-
+                 System.out.println(message.getSubject());
                 if (message.getSubject() == null ||
                         !message.getSubject().contains(expectedSubject)) {
                     System.out.println("No matching email found");
