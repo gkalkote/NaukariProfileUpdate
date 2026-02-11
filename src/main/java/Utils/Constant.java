@@ -19,7 +19,7 @@ public class Constant {
 
 
     // Pdf files path
-    public static String HR_EMAIL_PATH = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test" + File.separator + "resources" + File.separator + "EmailPdf";
+    public static String HR_EMAIL_PATH = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test" + File.separator + "resources" + File.separator + "Emailpdf";
     public static String BANG_HR_EMAIL_PATH = HR_EMAIL_PATH + File.separator + "Bangalore_Chennai.pdf";
     public static String HYD_HR_EMAIL_PATH = HR_EMAIL_PATH + File.separator + "Hyderabad.pdf";
     public static String PUNE_HR_EMAIL_PATH = HR_EMAIL_PATH + File.separator + "Pune Mumbai.pdf";
