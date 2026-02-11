@@ -61,7 +61,7 @@ public class SendEmailTest extends PlaywrightFactoryPage {
     }
 
 
-    @Test
+    @Test(enabled = false)
     public void sendEmailSushant() {
         for (String file : filesPaths) {
             Set<String> emails = ExtractHREmailsFromPDF.extractEmails(file);
