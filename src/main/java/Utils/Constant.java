@@ -14,8 +14,7 @@ public class Constant {
     public static String GANESH_RESUME_PATH = RESUME_FOLDER_PATH + File.separator + "Ganesh_k_5_YOE_SDET.pdf";
     public static String TRUPTI_RESUME_PATH = RESUME_FOLDER_PATH + File.separator + "TRUPTI-AHIR-5YOE.pdf";
     public static String NIKHIL_RESUME_PATH = RESUME_FOLDER_PATH + File.separator +"Nikhil Mali_Java_Developer.pdf";
-
-
+    public static String KRISHNA_RESUME_PATH = RESUME_FOLDER_PATH + File.separator +"Krishna_Indrale_QA_Engineer_CV_2026.pdf";
 
 
     // Pdf files path
@@ -26,5 +25,7 @@ public class Constant {
     public static String OTHER_HR_EMAIL_PATH = HR_EMAIL_PATH + File.separator + "Other_Cities.pdf";
     public static String TestingJobs_HR_EMAIL_PATH = HR_EMAIL_PATH + File.separator + "TestingJobs_FullList.pdf";
     public static String WFH_HR_EMAIL_PATH = HR_EMAIL_PATH + File.separator + "WFH Remote Onsite etc.pdf";
+//    public static String DEV_HR_EMAIL_PATH = HR_EMAIL_PATH + File.separator + "DevPdfPath.pdf";
+
 
 }

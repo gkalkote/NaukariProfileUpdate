@@ -308,6 +308,22 @@ public class EmailData {
                     "✉️ <a href='mailto:em.nikhilmali@gmail.com'>em.nikhilmali@gmail.com</a><br>" +
                     "📞 9158338899</p>";
 
+    public static String KRISHNA_EMAIL_SUBJECT = "Application of QA Engineer immediate joiner";
+
+    public static final String KRISHNA_EMAIL_BODY =
+            "Hello ,\n" +
+                    "\n" +
+                    "My name is Krishna Indrale. I have 5.0 years of experience in the software testing domain and am seeking new opportunities. I understand that there is an opening for a QA Engineer at your company, and I am very interested in this role.\n" +
+                    "\n" +
+                    "My key skills include Java, Selenium, Manual Testing, Functional Testing, and API Testing. I am sharing my resume with this email for your reference. I would be delighted to provide any additional information or attend an interview at your convenience.\n" +
+                    "\n" +
+                    "Thank you for considering my application.\n" +
+                    "\n" +
+                    "Thanks & Regards,\n" +
+                    "Krishna Indrale\n" +
+                    "krishnaindrale19@gmail.com"+
+                    "9130776570";
+
 
 }
 
