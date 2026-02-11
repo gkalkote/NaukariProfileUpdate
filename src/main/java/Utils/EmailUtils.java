@@ -151,7 +151,7 @@ public class EmailUtils {
             inbox.open(Folder.READ_ONLY);
 
             int totalMessages = inbox.getMessageCount();
-            int start = Math.max(1, totalMessages - 15);
+            int start = Math.max(1, totalMessages - 30);
 
             Message[] messages = inbox.getMessages(start, totalMessages);
 
