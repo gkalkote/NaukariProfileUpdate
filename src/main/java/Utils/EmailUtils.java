@@ -8,6 +8,7 @@ import jakarta.mail.internet.MimeMultipart;
 
 
 import java.io.File;
+import java.util.Date;
 import java.util.Properties;
 import java.util.Set;
 
@@ -131,6 +132,7 @@ public class EmailUtils {
         }
     }
 
+
     public void downloadPdfAttachments(String email,
                                        String password,
                                        String expectedSubject,
@@ -142,65 +144,108 @@ public class EmailUtils {
         props.put("mail.imap.port", "993");
         props.put("mail.imap.ssl.enable", "true");
 
+        Store store = null;
+        Folder inbox = null;
+
         try {
-            Session session = Session.getDefaultInstance(props);
-            Store store = session.getStore("imaps");
+            Session session = Session.getInstance(props);
+            store = session.getStore("imaps");
             store.connect("imap.gmail.com", email, password);
 
-            Folder inbox = store.getFolder("INBOX");
+            inbox = store.getFolder("INBOX");
             inbox.open(Folder.READ_ONLY);
 
             int totalMessages = inbox.getMessageCount();
-            int start = Math.max(1, totalMessages - 35);
 
+            if (totalMessages == 0) {
+                System.out.println("No emails found in inbox.");
+                return;
+            }
+
+            // ✅ Fetch latest 3 emails
+            int start = Math.max(1, totalMessages - 2);
             Message[] messages = inbox.getMessages(start, totalMessages);
 
+            System.out.println("Fetched last " + messages.length + " emails.");
+
+            // ✅ Find the latest email based on received time
+            Message latestMessage = null;
+            Date latestDate = null;
+
+            for (Message message : messages) {
+                Date receivedDate = message.getReceivedDate();
+
+                if (receivedDate != null &&
+                        (latestDate == null || receivedDate.after(latestDate))) {
+                    latestDate = receivedDate;
+                    latestMessage = message;
+                }
+            }
+
+            if (latestMessage == null) {
+                System.out.println("No valid email found among latest 3.");
+                return;
+            }
+
+            System.out.println("Latest email subject: " + latestMessage.getSubject());
+            System.out.println("Received at: " + latestDate);
+
+            // ✅ Check subject match
+            if (latestMessage.getSubject() == null ||
+                    !latestMessage.getSubject().contains(expectedSubject)) {
+                System.out.println("Latest email does not match expected subject.");
+                return;
+            }
+
+            // ✅ Create download directory if not exists
             File downloadDir = new File(downloadDirPath);
             if (!downloadDir.exists()) {
                 downloadDir.mkdirs();
             }
 
-            System.out.println("📥 Scanning last " + messages.length + " emails...");
+            // ✅ Process attachments
+            if (latestMessage.getContent() instanceof Multipart) {
 
-            for (int i = messages.length - 1; i >= 0; i--) {
-                Message message = messages[i];
-                 System.out.println(message.getSubject());
-                if (message.getSubject() == null ||
-                        !message.getSubject().contains(expectedSubject)) {
-                    System.out.println("No matching email found");
-                    continue;
-                }
+                Multipart multipart = (Multipart) latestMessage.getContent();
 
-                if (message.getContent() instanceof Multipart) {
-                    Multipart multipart = (Multipart) message.getContent();
+                for (int i = 0; i < multipart.getCount(); i++) {
+                    BodyPart bodyPart = multipart.getBodyPart(i);
 
-                    for (int j = 0; j < multipart.getCount(); j++) {
-                        BodyPart bodyPart = multipart.getBodyPart(j);
+                    if (Part.ATTACHMENT.equalsIgnoreCase(bodyPart.getDisposition())
+                            || bodyPart.getFileName() != null) {
 
-                        if (Part.ATTACHMENT.equalsIgnoreCase(bodyPart.getDisposition())
-                                || bodyPart.getFileName() != null) {
+                        String fileName = bodyPart.getFileName();
 
-                            String fileName = bodyPart.getFileName();
+                        if (fileName != null && fileName.toLowerCase().endsWith(".pdf")) {
 
-                            if (fileName != null && fileName.toLowerCase().endsWith(".pdf")) {
+                            File file = new File(downloadDir, fileName);
 
-                                File file = new File(downloadDir, fileName);
-                                MimeBodyPart mimeBodyPart = (MimeBodyPart) bodyPart;
-                                mimeBodyPart.saveFile(file);
+                            MimeBodyPart mimeBodyPart = (MimeBodyPart) bodyPart;
+                            mimeBodyPart.saveFile(file);
 
-                                System.out.println("✅ PDF downloaded: " + file.getAbsolutePath());
-                            }
+                            System.out.println("✅ PDF downloaded: " + file.getAbsolutePath());
                         }
                     }
                 }
-            }
 
-            inbox.close(false);
-            store.close();
+            } else {
+                System.out.println("Latest email does not contain attachments.");
+            }
 
         } catch (Exception e) {
             System.err.println("❌ Failed to download PDF attachments");
             e.printStackTrace();
+        } finally {
+            try {
+                if (inbox != null && inbox.isOpen()) {
+                    inbox.close(false);
+                }
+                if (store != null) {
+                    store.close();
+                }
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
         }
     }
 
