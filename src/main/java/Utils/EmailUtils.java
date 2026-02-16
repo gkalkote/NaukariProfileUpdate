@@ -162,40 +162,41 @@ public class EmailUtils {
                 return;
             }
 
-            // ✅ Fetch latest 3 emails
+            // ✅ Fetch last 3 emails
             int start = Math.max(1, totalMessages - 2);
             Message[] messages = inbox.getMessages(start, totalMessages);
 
             System.out.println("Fetched last " + messages.length + " emails.");
 
-            // ✅ Find the latest email based on received time
-            Message latestMessage = null;
+            Message latestMatchingMessage = null;
             Date latestDate = null;
 
+            // ✅ First filter by subject, then pick latest by time
             for (Message message : messages) {
-                Date receivedDate = message.getReceivedDate();
 
-                if (receivedDate != null &&
-                        (latestDate == null || receivedDate.after(latestDate))) {
-                    latestDate = receivedDate;
-                    latestMessage = message;
+                String subject = message.getSubject();
+                System.out.println("Checking subject: " + subject);
+
+                if (subject != null && subject.contains(expectedSubject)) {
+
+                    Date receivedDate = message.getReceivedDate();
+
+                    if (receivedDate != null &&
+                            (latestDate == null || receivedDate.after(latestDate))) {
+
+                        latestDate = receivedDate;
+                        latestMatchingMessage = message;
+                    }
                 }
             }
 
-            if (latestMessage == null) {
-                System.out.println("No valid email found among latest 3.");
+            if (latestMatchingMessage == null) {
+                System.out.println("No email found with matching subject in last 3 emails.");
                 return;
             }
 
-            System.out.println("Latest email subject: " + latestMessage.getSubject());
+            System.out.println("Selected Email Subject: " + latestMatchingMessage.getSubject());
             System.out.println("Received at: " + latestDate);
-
-            // ✅ Check subject match
-            if (latestMessage.getSubject() == null ||
-                    !latestMessage.getSubject().contains(expectedSubject)) {
-                System.out.println("Latest email does not match expected subject.");
-                return;
-            }
 
             // ✅ Create download directory if not exists
             File downloadDir = new File(downloadDirPath);
@@ -204,9 +205,9 @@ public class EmailUtils {
             }
 
             // ✅ Process attachments
-            if (latestMessage.getContent() instanceof Multipart) {
+            if (latestMatchingMessage.getContent() instanceof Multipart) {
 
-                Multipart multipart = (Multipart) latestMessage.getContent();
+                Multipart multipart = (Multipart) latestMatchingMessage.getContent();
 
                 for (int i = 0; i < multipart.getCount(); i++) {
                     BodyPart bodyPart = multipart.getBodyPart(i);
@@ -229,7 +230,7 @@ public class EmailUtils {
                 }
 
             } else {
-                System.out.println("Latest email does not contain attachments.");
+                System.out.println("Matching email does not contain attachments.");
             }
 
         } catch (Exception e) {
@@ -248,5 +249,6 @@ public class EmailUtils {
             }
         }
     }
+
 
 }
