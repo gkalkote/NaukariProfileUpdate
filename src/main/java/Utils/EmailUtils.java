@@ -11,10 +11,7 @@ import jakarta.mail.search.SubjectTerm;
 
 
 import java.io.File;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.Properties;
-import java.util.Set;
+import java.util.*;
 
 public class EmailUtils {
 
@@ -152,6 +149,7 @@ public class EmailUtils {
         Folder inbox = null;
 
         try {
+            // 1️⃣ Connect to Gmail
             Session session = Session.getInstance(props);
             store = session.getStore("imaps");
             store.connect("imap.gmail.com", email, password);
@@ -159,7 +157,7 @@ public class EmailUtils {
             inbox = store.getFolder("INBOX");
             inbox.open(Folder.READ_ONLY);
 
-            // ✅ STEP 1: Filter by subject FIRST
+            // 2️⃣ Filter emails by subject
             SearchTerm subjectTerm = new SubjectTerm(expectedSubject);
             Message[] filteredMessages = inbox.search(subjectTerm);
 
@@ -170,42 +168,45 @@ public class EmailUtils {
 
             System.out.println("Total emails found with subject: " + filteredMessages.length);
 
-            // ✅ STEP 2: Sort by received date (newest first)
-            Arrays.sort(filteredMessages, (m1, m2) -> {
-                try {
-                    Date d1 = m1.getReceivedDate();
-                    Date d2 = m2.getReceivedDate();
+            // 3️⃣ Store filtered messages in a list
+            List<Message> messageList = new ArrayList<>();
+            for (Message message : filteredMessages) {
+                messageList.add(message);
+            }
 
-                    if (d1 == null) return 1;
-                    if (d2 == null) return -1;
+            // 4️⃣ Find the latest email based on received date
+            Message latestMessage = null;
+            Date latestDate = null;
 
-                    return d2.compareTo(d1); // Descending order
-                } catch (MessagingException e) {
-                    return 0;
+            for (Message message : messageList) {
+                Date receivedDate = message.getReceivedDate();
+                if (receivedDate == null) {
+                    receivedDate = message.getSentDate(); // fallback
                 }
-            });
 
-            // ✅ STEP 3: Take latest 3
-            int limit = Math.min(3, filteredMessages.length);
-            Message[] latestThree = Arrays.copyOfRange(filteredMessages, 0, limit);
+                if (receivedDate != null &&
+                        (latestDate == null || receivedDate.after(latestDate))) {
+                    latestDate = receivedDate;
+                    latestMessage = message;
+                }
+            }
 
-            System.out.println("Taking latest " + latestThree.length + " emails after filtering.");
-
-            // ✅ STEP 4: From those 3, pick latest by received time
-            Message latestMessage = latestThree[0]; // Already sorted desc
+            if (latestMessage == null) {
+                System.out.println("No valid email found after date comparison.");
+                return;
+            }
 
             System.out.println("Selected Email Subject: " + latestMessage.getSubject());
-            System.out.println("Received at: " + latestMessage.getReceivedDate());
+            System.out.println("Received at: " + latestDate);
 
-            // ✅ Create download directory safely
+            // 5️⃣ Prepare download directory
             File downloadDir = new File(downloadDirPath);
             if (!downloadDir.exists()) {
                 downloadDir.mkdirs();
             }
 
-            // ✅ Process attachments
+            // 6️⃣ Process attachments
             if (latestMessage.getContent() instanceof Multipart) {
-
                 Multipart multipart = (Multipart) latestMessage.getContent();
 
                 for (int i = 0; i < multipart.getCount(); i++) {
@@ -217,7 +218,6 @@ public class EmailUtils {
                         String fileName = bodyPart.getFileName();
 
                         if (fileName != null && fileName.toLowerCase().endsWith(".pdf")) {
-
                             File file = new File(downloadDir, fileName);
 
                             // Ensure directory exists before saving
