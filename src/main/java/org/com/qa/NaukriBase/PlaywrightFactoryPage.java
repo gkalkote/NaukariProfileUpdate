@@ -50,7 +50,7 @@ public class PlaywrightFactoryPage {
         String sushantEmailPassKey = "khejraffnvojznnb";
         EmailUtils emailUtils = new EmailUtils();
         emailUtils.deleteExistingPdfs(HR_EMAIL_PATH);
-        String subject= "[Update our Phone Number] - Today Testing Jobs Across India -"+getTodayDateString();
+        String subject= "Today Testing Jobs Across India - "+getTodayDateString();
         emailUtils.downloadPdfAttachments("sushj2405@gmail.com", sushantEmailPassKey,subject,HR_EMAIL_PATH);
     }
 
