@@ -5,9 +5,13 @@ import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeBodyPart;
 import jakarta.mail.internet.MimeMessage;
 import jakarta.mail.internet.MimeMultipart;
+import jakarta.mail.search.SearchTerm;
+import jakarta.mail.search.SubjectTerm;
+
 
 
 import java.io.File;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Properties;
 import java.util.Set;
@@ -155,59 +159,54 @@ public class EmailUtils {
             inbox = store.getFolder("INBOX");
             inbox.open(Folder.READ_ONLY);
 
-            int totalMessages = inbox.getMessageCount();
+            // ✅ STEP 1: Filter by subject FIRST
+            SearchTerm subjectTerm = new SubjectTerm(expectedSubject);
+            Message[] filteredMessages = inbox.search(subjectTerm);
 
-            if (totalMessages == 0) {
-                System.out.println("No emails found in inbox.");
+            if (filteredMessages.length == 0) {
+                System.out.println("No emails found with subject: " + expectedSubject);
                 return;
             }
 
-            // ✅ Fetch last 3 emails
-            int start = Math.max(1, totalMessages - 2);
-            Message[] messages = inbox.getMessages(start, totalMessages);
+            System.out.println("Total emails found with subject: " + filteredMessages.length);
 
-            System.out.println("Fetched last " + messages.length + " emails.");
+            // ✅ STEP 2: Sort by received date (newest first)
+            Arrays.sort(filteredMessages, (m1, m2) -> {
+                try {
+                    Date d1 = m1.getReceivedDate();
+                    Date d2 = m2.getReceivedDate();
 
-            Message latestMatchingMessage = null;
-            Date latestDate = null;
+                    if (d1 == null) return 1;
+                    if (d2 == null) return -1;
 
-            // ✅ First filter by subject, then pick latest by time
-            for (Message message : messages) {
-
-                String subject = message.getSubject();
-                System.out.println("Checking subject: " + subject);
-
-                if (subject != null && subject.contains(expectedSubject)) {
-
-                    Date receivedDate = message.getReceivedDate();
-
-                    if (receivedDate != null &&
-                            (latestDate == null || receivedDate.after(latestDate))) {
-
-                        latestDate = receivedDate;
-                        latestMatchingMessage = message;
-                    }
+                    return d2.compareTo(d1); // Descending order
+                } catch (MessagingException e) {
+                    return 0;
                 }
-            }
+            });
 
-            if (latestMatchingMessage == null) {
-                System.out.println("No email found with matching subject in last 3 emails.");
-                return;
-            }
+            // ✅ STEP 3: Take latest 3
+            int limit = Math.min(3, filteredMessages.length);
+            Message[] latestThree = Arrays.copyOfRange(filteredMessages, 0, limit);
 
-            System.out.println("Selected Email Subject: " + latestMatchingMessage.getSubject());
-            System.out.println("Received at: " + latestDate);
+            System.out.println("Taking latest " + latestThree.length + " emails after filtering.");
 
-            // ✅ Create download directory if not exists
+            // ✅ STEP 4: From those 3, pick latest by received time
+            Message latestMessage = latestThree[0]; // Already sorted desc
+
+            System.out.println("Selected Email Subject: " + latestMessage.getSubject());
+            System.out.println("Received at: " + latestMessage.getReceivedDate());
+
+            // ✅ Create download directory safely
             File downloadDir = new File(downloadDirPath);
             if (!downloadDir.exists()) {
                 downloadDir.mkdirs();
             }
 
             // ✅ Process attachments
-            if (latestMatchingMessage.getContent() instanceof Multipart) {
+            if (latestMessage.getContent() instanceof Multipart) {
 
-                Multipart multipart = (Multipart) latestMatchingMessage.getContent();
+                Multipart multipart = (Multipart) latestMessage.getContent();
 
                 for (int i = 0; i < multipart.getCount(); i++) {
                     BodyPart bodyPart = multipart.getBodyPart(i);
@@ -221,6 +220,9 @@ public class EmailUtils {
 
                             File file = new File(downloadDir, fileName);
 
+                            // Ensure directory exists before saving
+                            file.getParentFile().mkdirs();
+
                             MimeBodyPart mimeBodyPart = (MimeBodyPart) bodyPart;
                             mimeBodyPart.saveFile(file);
 
@@ -230,7 +232,7 @@ public class EmailUtils {
                 }
 
             } else {
-                System.out.println("Matching email does not contain attachments.");
+                System.out.println("Selected email does not contain attachments.");
             }
 
         } catch (Exception e) {
@@ -249,6 +251,5 @@ public class EmailUtils {
             }
         }
     }
-
 
 }
