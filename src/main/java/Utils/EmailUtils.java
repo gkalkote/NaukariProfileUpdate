@@ -178,7 +178,7 @@ public class EmailUtils {
 
             // 4️⃣ Take last 10 emails from the list (or all if less than 10)
             int total = messageList.size();
-            int startIndex = Math.max(0, total - 10);
+            int startIndex = Math.max(0, total - 3);
             List<Message> lastTen = messageList.subList(startIndex, total);
 
             // 5️⃣ Find the latest email based on received date among last 10
