@@ -134,6 +134,7 @@ public class EmailUtils {
     }
 
 
+
     public void downloadPdfAttachments(String email,
                                        String password,
                                        String expectedSubject,
@@ -168,17 +169,23 @@ public class EmailUtils {
 
             System.out.println("Total emails found with subject: " + filteredMessages.length);
 
-            // 3️⃣ Store filtered messages in a list
+            // 3️⃣ Store filtered messages in a list and print their subjects
             List<Message> messageList = new ArrayList<>();
             for (Message message : filteredMessages) {
                 messageList.add(message);
+                System.out.println("📝 Filtered email subject: " + message.getSubject());
             }
 
-            // 4️⃣ Find the latest email based on received date
+            // 4️⃣ Take last 10 emails from the list (or all if less than 10)
+            int total = messageList.size();
+            int startIndex = Math.max(0, total - 10);
+            List<Message> lastTen = messageList.subList(startIndex, total);
+
+            // 5️⃣ Find the latest email based on received date among last 10
             Message latestMessage = null;
             Date latestDate = null;
 
-            for (Message message : messageList) {
+            for (Message message : lastTen) {
                 Date receivedDate = message.getReceivedDate();
                 if (receivedDate == null) {
                     receivedDate = message.getSentDate(); // fallback
@@ -196,16 +203,16 @@ public class EmailUtils {
                 return;
             }
 
-            System.out.println("Selected Email Subject: " + latestMessage.getSubject());
+            System.out.println("✅ Selected Email Subject: " + latestMessage.getSubject());
             System.out.println("Received at: " + latestDate);
 
-            // 5️⃣ Prepare download directory
+            // 6️⃣ Prepare download directory
             File downloadDir = new File(downloadDirPath);
             if (!downloadDir.exists()) {
                 downloadDir.mkdirs();
             }
 
-            // 6️⃣ Process attachments
+            // 7️⃣ Process attachments
             if (latestMessage.getContent() instanceof Multipart) {
                 Multipart multipart = (Multipart) latestMessage.getContent();
 
