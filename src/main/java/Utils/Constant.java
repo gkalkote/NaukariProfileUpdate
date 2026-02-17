@@ -28,10 +28,13 @@ public class Constant {
     public static String TestingJobs_HR_EMAIL_PATH = HR_EMAIL_PATH + File.separator + "TestingJobs_FullList.pdf";
     public static String WFH_HR_EMAIL_PATH = HR_EMAIL_PATH + File.separator + "WFH Remote Onsite etc.pdf";
 
-    // note - pls change the file if you want extract mail for older date pdf
-    // this will use current date pdf file name
-    // file name is " PaidExperienceJavaJobs_11-2-2026_ALL_JOBS.pdf" formate.  This 11-2-2026 --> will take current date
-    public static String DEV_HR_EMAIL_PATH = HR_EMAIL_PATH + File.separator + "PaidExperienceJavaJobs_"+ PlaywrightFactoryPage.getTodayDateString("d-M-yyyy") +"_ALL_JOBS.pdf";
+    // NOTE:
+    // The PDF file name is generated using today's date (d-M-yyyy format).
+    // Example: PaidExperienceJavaJobs_18-2-2026_ALL_JOBS.pdf
+    // The system will always look for today's dated file in the Emailpdf folder.
+    // If you want to use an older PDF, either rename the file to today's date
+    // Otherwise, FileNotFoundException will occur.
+    public static String DEV_HR_EMAIL_PATH = HR_EMAIL_PATH + File.separator + "PaidExperienceJavaJobs_" + PlaywrightFactoryPage.getTodayDateString("d-M-yyyy") + "_ALL_JOBS.pdf";
 
 
 }
