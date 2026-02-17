@@ -55,8 +55,8 @@ public class PlaywrightFactoryPage {
         String testingSubject= "Today Testing Jobs Across India - "+getTodayDateString("MMM dd - yyyy");
         emailUtils.downloadPdfAttachments("sushj2405@gmail.com", sushantEmailPassKey,testingSubject,HR_EMAIL_PATH);
         //dev pdf download
-        String devSubject= "Paid Exp Dev Jobs] PaidExperienceJavaJobs Jobs for : "+getTodayDateString("d-M-yyyy");
-        emailUtils.downloadPdfAttachments("anchalsingh1029@gmail.com", anchalEmailPassKey,devSubject,HR_EMAIL_PATH);
+//        String devSubject= "Paid Exp Dev Jobs] PaidExperienceJavaJobs Jobs for : "+getTodayDateString("d-M-yyyy");
+//        emailUtils.downloadPdfAttachments("anchalsingh1029@gmail.com", anchalEmailPassKey,devSubject,HR_EMAIL_PATH);
 
     }
 

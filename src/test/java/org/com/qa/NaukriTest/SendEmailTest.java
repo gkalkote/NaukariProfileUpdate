@@ -36,7 +36,7 @@ public class SendEmailTest extends PlaywrightFactoryPage {
     private final String ganeshEmailPassKey = "adrctxykgpumbyjb";
     private final String nikhilEmailPassKey= "rmunucldudesopqo";
     private final String krishnaEmailPasskey = "mkkyctaiesuwrvag";
-/*
+
     @Test
     public void sendEmail() {
 
@@ -58,8 +58,7 @@ public class SendEmailTest extends PlaywrightFactoryPage {
         }
         System.out.println("Total Email send to HR's are : "+ totalHRMailCount);
     }
-*/
-
+/*
     @Test(enabled = true)
     public void devBccSendEmail() {
         int totalHRMailCount = 0;
@@ -75,6 +74,6 @@ public class SendEmailTest extends PlaywrightFactoryPage {
         }
         System.out.println("Total Email send to HR's are : " + totalHRMailCount);
     }
-
+*/
 
 }
