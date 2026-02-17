@@ -39,19 +39,25 @@ public class PlaywrightFactoryPage {
         // Initialize LoginPage
         threadLocalLoginPage.set(new LoginPage(page));
     }
-    public static String getTodayDateString() {
-        SimpleDateFormat sdf = new SimpleDateFormat("MMM dd - yyyy");
+    public static String getTodayDateString(String dateFormate) {
+        SimpleDateFormat sdf = new SimpleDateFormat(dateFormate);
         Date today = new Date();
         return sdf.format(today);
     }
 
+
     @BeforeSuite
     public void emailPdfCleanUpAndDownloadLatest(){
-        String sushantEmailPassKey = "khejraffnvojznnb";
+        final String sushantEmailPassKey = "khejraffnvojznnb";
+        final String anchalEmailPassKey = "vfehlvcsciwiwfdz";
         EmailUtils emailUtils = new EmailUtils();
         emailUtils.deleteExistingPdfs(HR_EMAIL_PATH);
-        String subject= "Today Testing Jobs Across India - "+getTodayDateString();
-        emailUtils.downloadPdfAttachments("sushj2405@gmail.com", sushantEmailPassKey,subject,HR_EMAIL_PATH);
+        String testingSubject= "Today Testing Jobs Across India - "+getTodayDateString("MMM dd - yyyy");
+        emailUtils.downloadPdfAttachments("sushj2405@gmail.com", sushantEmailPassKey,testingSubject,HR_EMAIL_PATH);
+        //dev pdf download
+        String devSubject= "Paid Exp Dev Jobs] PaidExperienceJavaJobs Jobs for : "+getTodayDateString("d-M-yyyy");
+        emailUtils.downloadPdfAttachments("anchalsingh1029@gmail.com", anchalEmailPassKey,devSubject,HR_EMAIL_PATH);
+
     }
 
     @AfterMethod

@@ -22,7 +22,8 @@ public class SendEmailTest extends PlaywrightFactoryPage {
                     HYD_HR_EMAIL_PATH,
                     BANG_HR_EMAIL_PATH,
                     TestingJobs_HR_EMAIL_PATH,
-                    OTHER_HR_EMAIL_PATH
+                    OTHER_HR_EMAIL_PATH,
+                    DEV_HR_EMAIL_PATH
             )
     );
 
@@ -35,7 +36,7 @@ public class SendEmailTest extends PlaywrightFactoryPage {
     private final String ganeshEmailPassKey = "adrctxykgpumbyjb";
     private final String nikhilEmailPassKey= "rmunucldudesopqo";
     private final String krishnaEmailPasskey = "mkkyctaiesuwrvag";
-
+/*
     @Test
     public void sendEmail() {
 
@@ -57,24 +58,23 @@ public class SendEmailTest extends PlaywrightFactoryPage {
         }
         System.out.println("Total Email send to HR's are : "+ totalHRMailCount);
     }
+*/
 
-    /*
-    @Test(enabled = false)
-    public void devBccSendEmail(){
-        int totalHRMailCount=0;
-
+    @Test(enabled = true)
+    public void devBccSendEmail() {
+        int totalHRMailCount = 0;
         for (String filePath : filesPaths) {
-            Set<String> HR_Emails =  ExtractHREmailsFromPDF.limitEmails(ExtractHREmailsFromPDF.extractEmails(filePath));
-            totalHRMailCount+=HR_Emails.size();
-            EmailUtils emailUtils = new EmailUtils();
-            if(filePath.contains(NameOfpdf_file)){
-               emailUtils.sendEmailToBCC("yadavpriya73028@gmail.com", priyaEmailPassKey, HR_Emails, PRIYA_EMAIL_SUBJECT, PRIYA_EMAIL_BODY, PRIYA_RESUME_PATH);
-               emailUtils.sendEmailToBCC("anchalsingh1029@gmail.com", anchalEmailPassKey, HR_Emails, ANCHAL_EMAIL_SUBJECT, ANCHAL_EMAIL_BODY, ANCHAL_RESUME_PATH);
-               emailUtils.sendEmailToBCC("em.nikhilmali@gmail.com", nikhilEmailPassKey, HR_Emails, NIKHIL_EMAIL_SUBJECT, NIKHIL_EMAIL_BODY, NIKHIL_RESUME_PATH);
+            if (filePath.equals(DEV_HR_EMAIL_PATH)) {
+                Set<String> HR_Emails = ExtractHREmailsFromPDF.limitEmails(ExtractHREmailsFromPDF.extractEmails(filePath));
+                totalHRMailCount += HR_Emails.size();
+                EmailUtils emailUtils = new EmailUtils();
+                emailUtils.sendEmailToBCC("yadavpriya73028@gmail.com", priyaEmailPassKey, HR_Emails, PRIYA_EMAIL_SUBJECT, PRIYA_EMAIL_BODY, PRIYA_RESUME_PATH);
+                emailUtils.sendEmailToBCC("anchalsingh1029@gmail.com", anchalEmailPassKey, HR_Emails, ANCHAL_EMAIL_SUBJECT, ANCHAL_EMAIL_BODY, ANCHAL_RESUME_PATH);
+                emailUtils.sendEmailToBCC("em.nikhilmali@gmail.com", nikhilEmailPassKey, HR_Emails, NIKHIL_EMAIL_SUBJECT, NIKHIL_EMAIL_BODY, NIKHIL_RESUME_PATH);
             }
         }
-        System.out.println("Total Email send to HR's are : "+ totalHRMailCount);
+        System.out.println("Total Email send to HR's are : " + totalHRMailCount);
     }
-    */
+
 
 }
