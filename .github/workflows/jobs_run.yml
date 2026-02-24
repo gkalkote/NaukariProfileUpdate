@@ -2,10 +2,7 @@ name: Scheduled Playwright Tests
 permissions:
   contents: read
 
-on:
-  schedule:
-    - cron: "* * * * *"
-  workflow_dispatch:
+
 
 jobs:
   playwright-tests:
