@@ -308,21 +308,44 @@ public class EmailData {
                     "✉️ <a href='mailto:em.nikhilmali@gmail.com'>em.nikhilmali@gmail.com</a><br>" +
                     "📞 9158338899</p>";
 
-    public static String KRISHNA_EMAIL_SUBJECT = "Application of QA Engineer immediate joiner";
+    public static String KRISHNA_EMAIL_SUBJECT = "Application of QA Engineer |5 YOE|Serving Notice Period";
 
     public static final String KRISHNA_EMAIL_BODY =
-            "Hello ,\n" +
-                    "\n" +
-                    "My name is Krishna Indrale. I have 5.0 years of experience in the software testing domain and am seeking new opportunities. I understand that there is an opening for a QA Engineer at your company, and I am very interested in this role.\n" +
-                    "\n" +
-                    "My key skills include Java, Selenium, Manual Testing, Functional Testing, and API Testing. I am sharing my resume with this email for your reference. I would be delighted to provide any additional information or attend an interview at your convenience.\n" +
-                    "\n" +
-                    "Thank you for considering my application.\n" +
-                    "\n" +
-                    "Thanks & Regards,\n" +
-                    "Krishna Indrale\n" +
-                    "krishnaindrale19@gmail.com"+
-                    "9130776570";
+           "\"<p>Hello,<br>\" +\n" +
+                   "\"Greetings of the day!</p>\" +\n" +
+                   "\n" +
+                   "\"<p>My name is <b>Krishna Indrale</b>, and I have <b>5.0 years of experience</b> in the Software Testing domain. \" +\n" +
+                   "\"I am writing to express my interest in a <b>QA Engineer</b> position at your organization. I would appreciate \" +\n" +
+                   "\"the opportunity to be considered for any suitable openings that match my profile.</p>\" +\n" +
+                   "\n" +
+                   "\"<p><b>Below are my skill sets and professional details for your reference:</b></p>\" +\n" +
+                   "\n" +
+                   "\"<p><b>Skills:</b></p>\" +\n" +
+                   "\"<ul>\" +\n" +
+                   "\"<li>✔ <b>Programming Language:</b> Java</li>\" +\n" +
+                   "\"<li>✔ <b>Automation Tools:</b> Selenium, Playwright</li>\" +\n" +
+                   "\"<li>✔ <b>API Testing:</b> Rest Assured</li>\" +\n" +
+                   "\"<li>✔ <b>Testing Types:</b> Manual Testing, Functional Testing, API Testing</li>\" +\n" +
+                   "\"<li>✔ <b>Automation Testing:</b> Test Automation using Selenium & Playwright</li>\" +\n" +
+                   "\"</ul>\" +\n" +
+                   "\n" +
+                   "\"<p>In my professional experience, I have been involved in designing and executing test cases, \" +\n" +
+                   "\"performing manual and automation testing, validating APIs, and ensuring the delivery of high-quality \" +\n" +
+                   "\"software. I have experience working closely with development teams to identify and resolve defects \" +\n" +
+                   "\"efficiently.</p>\" +\n" +
+                   "\n" +
+                   "\"<p><b>Total Experience:</b> 5.0 years<br>\" +\n" +
+                   "\"<b>Current Location:</b> Pune, India</p>\" +\n" +
+                   "\"<b>Last Working Day :</b> 09 April 2026</p>\" +\n" +
+                   "\"<b>Current CTC :</b> 9.5LPA</p>\" +\n" +
+                   "\n" +
+                   "\"<p>Please find my resume attached for your review. I would be glad to discuss how my skills and \" +\n" +
+                   "\"experience align with your team’s requirements.</p>\" +\n" +
+                   "\n" +
+                   "\"<p>Thanks & Regards,<br>\" +\n" +
+                   "\"Krishna Indrale<br>\" +\n" +
+                   "✉️ <a href= 'krishnaindrale19@gmail.com'>krishnaindrale19@gmail.com</a><br>\" +\n" +
+                   "📞 9130776570</p>\";";
 
 
 }
